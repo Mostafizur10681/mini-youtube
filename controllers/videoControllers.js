@@ -1,9 +1,6 @@
 const { findByIdAndDelete } = require("../models/VideoModel");
 const videoModel = require("../models/VideoModel");
 
-
-
-
 // list of videos
 const getAllvideos = async (req, res) => {
     try {

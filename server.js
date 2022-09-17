@@ -1,6 +1,8 @@
 const express = require('express');
-const router = require('./routes/videos');
+const videosRoutes = require('./routes/videos');
 const mongoose = require("mongoose");
+const userRoutes = require('./routes/userRoutes');
+
 
 
 // port = 5000
@@ -10,7 +12,11 @@ const app = express()
 
 // middleware
 app.use(express.json())
-app.use('/videos', router)
+
+
+// route
+app.use("/videos", videosRoutes);
+app.use("/user", userRoutes)
 
 
 // connect with DB
